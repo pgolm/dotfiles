@@ -1,0 +1,32 @@
+[apply]
+  whitespace = nowarn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
+[mergetool]
+  keepBackup = false
+[user]
+  name = "{{ .fullname }}"
+  email = "{{ .email }}"
+[push]
+  # See `git help config` (search for push.default)
+  # for more information on different options of the below setting.
+  #
+  # Setting to git 2.0 default to surpress warning message
+  default = simple
+[rerere]
+  enabled = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
