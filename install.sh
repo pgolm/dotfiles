@@ -10,6 +10,11 @@ if ! [ -x "$(command -v git)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v vim)" ]; then
+  echo 'Error: vim is not installed.' >&2
+  exit 1
+fi
+
 if [ ! -e "$HOME/.bin/chezmoi" ]; then
     curl -sfL https://git.io/chezmoi | sh -s -- -b "$HOME/.bin"
 fi
