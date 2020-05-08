@@ -7,3 +7,9 @@ My dotfiles.
 ```
 curl -sfL https://raw.githubusercontent.com/pgolm/dotfiles/master/install.sh | sh
 ```
+
+## Requirements
+
+* `curl`
+* `git`
+* `vim`
