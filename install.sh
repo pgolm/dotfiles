@@ -15,7 +15,7 @@ if [ ! -e "$HOME/.bin/chezmoi" ]; then
 fi
 
 if [ ! -d "$HOME/.local/share/chezmoi" ]; then
-    $HOME/.bin/chezmoi init git@github.com:pgolm/dotfiles.git
+    $HOME/.bin/chezmoi init https://github.com/pgolm/dotfiles.git
 else
     $HOME/.bin/chezmoi update
 fi
