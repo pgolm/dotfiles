@@ -1,5 +1,5 @@
-{{- $fullname := promptString "fullname" -}}
-{{- $email := promptString "email" -}}
 [data]
+    {{- $fullname := promptString "fullname" -}}
     fullname = "{{ $fullname }}"
+    {{- $email := promptString "email" -}}
     email = "{{ $email }}"
