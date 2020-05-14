@@ -1,19 +1,21 @@
-{{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
-echo "noop on linux"
-{{ else if eq .chezmoi.os "darwin" -}}
-#!/bin/sh
-
+#!/usr/bin/env bash
+{{ if eq .chezmoi.os "darwin" -}}
 if ! [ -x "$(command -v brew)" ]; then
     echo 'Install brew...'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-brew cask install 1password
-brew cask install 1password-cli
-brew cask install alfred
-brew cask install docker
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install visual-studio-code
+cat > $HOME/.Brewfile <<EOF
+cask "1password-cli"
+cask "1password"
+cask "alfred"
+cask "docker"
+cask "google-chrome"
+cask "iterm2"
+cask "visual-studio-code"
+EOF
+
+brew bundle --global
+
+rm $HOME/.Brewfile
 {{ end -}}
