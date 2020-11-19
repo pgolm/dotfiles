@@ -1,3 +1,4 @@
+set LC_ALL en_US.UTF-8
 set PATH $HOME/.bin $PATH
 
 # activate iTerm2 features
