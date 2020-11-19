@@ -1,26 +1,22 @@
 #!/usr/bin/env bash
 
-if ! [ -x "$(command -v curl)" ]; then
-  echo 'Error: curl is not installed.' >&2
-  exit 1
-fi
+set -e # -e: exit on error
 
-if ! [ -x "$(command -v git)" ]; then
-  echo 'Error: git is not installed.' >&2
-  exit 1
-fi
-
-if ! [ -x "$(command -v vim)" ]; then
-  echo 'Error: vim is not installed.' >&2
-  exit 1
-fi
-
-if [ ! -e "$HOME/.bin/chezmoi" ]; then
-    curl -sfL https://git.io/chezmoi | sh -s -- -b "$HOME/.bin"
-fi
-
-if [ ! -d "$HOME/.local/share/chezmoi" ]; then
-    $HOME/.bin/chezmoi init https://github.com/pgolm/dotfiles.git
+if [ ! "$(command -v chezmoi)" ]; then
+  bin_dir="$HOME/.local/bin"
+  chezmoi="$HOME/.local/share/chezmoi"
+  if [ "$(command -v curl)" ]; then
+    sh -c "$(curl -fsSL https://git.io/chezmoi)" -- -b "$bin_dir"
+  elif [ "$(command -v wget)" ]; then
+    sh -c "$(wget -qO- https://git.io/chezmoi)" -- -b "$bin_dir"
+  else
+    echo "To install chezmoi, you must have curl or wget installed." >&2
+    exit 1
+  fi
 else
-    $HOME/.bin/chezmoi update
+  chezmoi=chezmoi
 fi
+
+# POSIX way to get script's dir: https://stackoverflow.com/a/29834779/12156188
+script_dir="$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)"
+exec "$chezmoi" init --apply "--source=$script_dir"
