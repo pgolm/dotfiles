@@ -4,7 +4,7 @@ set -e # -e: exit on error
 
 if [ ! "$(command -v chezmoi)" ]; then
   bin_dir="$HOME/.local/bin"
-  chezmoi="$HOME/.local/share/chezmoi"
+  chezmoi="$bin_dir/chezmoi"
   if [ "$(command -v curl)" ]; then
     sh -c "$(curl -fsSL https://git.io/chezmoi)" -- -b "$bin_dir"
   elif [ "$(command -v wget)" ]; then
