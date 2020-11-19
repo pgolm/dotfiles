@@ -1,5 +1,7 @@
 set LC_ALL en_US.UTF-8
-set PATH $HOME/.bin $PATH
+if test -d $HOME/.local/bin
+    set PATH $HOME/.local/bin $PATH
+end
 
 # activate iTerm2 features
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
