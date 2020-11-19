@@ -5,11 +5,9 @@ My dotfiles.
 ## Getting started
 
 ```
-curl -sfL https://raw.githubusercontent.com/pgolm/dotfiles/master/install.sh | sh
+git clone git@github.com:pgolm/dotfiles.git ~/.local/share/chezmoi/
+cd ~/.local/share/chezmoi/
+./install.sh
 ```
 
-## Requirements
-
-* `curl`
-* `git`
-* `vim`
+Powered by [chezmoi](https://www.chezmoi.io/)
