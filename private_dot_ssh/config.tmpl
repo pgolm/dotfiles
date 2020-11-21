@@ -1,0 +1,12 @@
+{{- if (eq .chezmoi.os "darwin") }}
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+{{- end }}
+
+{{- if (eq .chezmoi.hostname "io") }}
+
+Host kallisto
+  User admin
+  HostName 192.168.178.2
+{{- end }}

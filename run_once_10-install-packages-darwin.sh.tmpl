@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+
 {{ if eq .chezmoi.os "darwin" -}}
 if ! [ -x "$(command -v brew)" ]; then
     echo 'Install brew...'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-cat > $HOME/.Brewfile <<EOF
+brew bundle --file=- << EOF
 cask "1password-cli"
 cask "1password"
 cask "alfred"
@@ -13,9 +14,10 @@ cask "docker"
 cask "google-chrome"
 cask "iterm2"
 cask "visual-studio-code"
+
+tap "homebrew/cask-fonts"
+cask "font-hack-nerd-font"
+
+brew "fish"
 EOF
-
-brew bundle --global
-
-rm $HOME/.Brewfile
 {{ end -}}

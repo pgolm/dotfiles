@@ -1,0 +1,11 @@
+{{- if (eq .chezmoi.os "linux") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+sudo apt update
+sudo apt install -y \
+    direnv \
+    fish
+
+{{ end }}
