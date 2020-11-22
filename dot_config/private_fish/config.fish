@@ -1,9 +1,11 @@
-set LC_ALL en_US.UTF-8
+set -g LC_ALL en_US.UTF-8
 if test -d $HOME/.local/bin
     set PATH $HOME/.local/bin $PATH
 end
 
-# activate iTerm2 features
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 # iterm2_prompt_mark
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+if command -s starship > /dev/null
+    starship init fish | source
+end
