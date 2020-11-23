@@ -2,6 +2,7 @@
 Host *
   AddKeysToAgent yes
   UseKeychain yes
+  ForwardAgent yes
 {{- end }}
 
 {{- if (eq .chezmoi.hostname "io") }}
