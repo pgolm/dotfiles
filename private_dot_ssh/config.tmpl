@@ -11,3 +11,9 @@ Host kallisto
   User admin
   HostName 192.168.178.2
 {{- end }}
+{{- if (eq .chezmoi.hostname "NB368") }}
+
+Host remote-dev
+  User root
+  HostName 172.16.17.158
+{{- end }}
