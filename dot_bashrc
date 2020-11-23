@@ -1,5 +1,6 @@
 export LANG=en_IN.UTF-8
 
+export PATH=$HOME/.local/bin/:$PATH
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
