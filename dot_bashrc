@@ -1,10 +1,18 @@
 export LANG=en_IN.UTF-8
 
 export PATH=$HOME/.local/bin/:$PATH
+export EDITOR=vim
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+if test -e /usr/local/opt/asdf/asdf.sh
+then
+    source /usr/local/opt/asdf/asdf.sh
+    eval "$(asdf exec direnv hook bash)"
+fi
 
 if command -v starship &> /dev/null
 then

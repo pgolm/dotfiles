@@ -1,3 +1,5 @@
-if command -s brew > /dev/null; and test -e (brew --prefix asdf)/asdf.fish
-    source (brew --prefix asdf)/asdf.fish
+if test -e /usr/local/opt/asdf/asdf.fish
+    source /usr/local/opt/asdf/asdf.fish
+
+    eval (asdf exec direnv hook fish)
 end
