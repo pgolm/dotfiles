@@ -8,9 +8,15 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-if test -e /usr/local/opt/asdf/asdf.sh
+ASDF_SOURCE=$HOME/.asdf/asdf.sh
+if [ ! -e $ASDF_SOURCE ]
 then
-    source /usr/local/opt/asdf/asdf.sh
+    ASDF_SOURCE=/usr/local/opt/asdf/asdf.sh
+fi
+
+if test -e $ASDF_SOURCE
+then
+    source $ASDF_SOURCE
     eval "$(asdf exec direnv hook bash)"
 fi
 

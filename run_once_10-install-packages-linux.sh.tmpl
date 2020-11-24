@@ -5,6 +5,7 @@ set -eufo pipefail
 
 sudo apt update
 sudo apt install -y \
+    git \
     fish \
     tmux \
     fzf \
@@ -13,4 +14,6 @@ sudo apt install -y \
 
 # install starship
 curl -fsSL https://starship.rs/install.sh | bash -s -- -y
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 {{ end }}
