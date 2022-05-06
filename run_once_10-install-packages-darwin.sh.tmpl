@@ -7,8 +7,8 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 brew bundle --file=- << EOF
-cask "1password-cli"
-cask "1password"
+# cask "1password-cli"
+# cask "1password"
 cask "alfred"
 cask "docker"
 cask "google-chrome"
@@ -18,6 +18,7 @@ cask "obsidian"
 
 tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
+cask "font-jetbrains-mono"
 
 brew "fish"
 brew "tmux"
