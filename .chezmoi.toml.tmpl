@@ -1,13 +1,12 @@
-{{- $codespaces:= env "CODESPACES" | not | not -}}
-{{- $is_email:= env "DOTFILES_EMAIL" | not | not -}}
-{{- $email:= env "DOTFILES_EMAIL" -}}
+{{- $is_codespaces:= env "CODESPACES" | not | not -}}
+{{- $is_devcontainer:= env "VSCODE_GIT_ASKPASS_EXTRA_ARGS" | not | not -}}
 sourceDir = "{{ .chezmoi.sourceDir }}"
 
 [data]
   fullname = "Peter Golm"
   codespaces = {{ $codespaces }}
-{{- if $codespaces }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
+{{- if or $is_codespaces $is_devcontainer }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
   email = "your@email.com"
 {{- else }}{{/* Interactive setup, so prompt for an email address */}}
-  email = "{{ if $is_email}}{{ $email }}{{ else }}{{ promptString "email" }}{{ end }}"
+  email = "{{ promptString "email" }}"
 {{- end }}
