@@ -1,0 +1,26 @@
+{{- /* Checks if running interactively, which is not the case for GitHub Codespaces */ -}}
+{{- $interactive := stdinIsATTY -}}
+
+{{- $email := "you@example.com" -}}
+{{- if hasKey . "email" -}}
+{{-   $email = .email -}}
+{{- else if $interactive -}}
+{{-   $email = promptString "email" $email -}}
+{{- end -}}
+
+{{- $wakatime_api_key := "is missing" -}}
+{{- if hasKey . "wakatime_api_key" -}}
+{{-   $wakatime_api_key = .wakatime_api_key -}}
+{{- else if $interactive -}}
+{{-   $wakatime_api_key = (index (index (onepassword "7qxnszo3gnc4fbsceamk4jeiny").details.sections 1).fields 0).v -}}
+{{- end -}}
+
+{{- if $interactive -}}
+{{-   writeToStdout "💡 Tip: you can re-enter your name and email with `chezmoi init --data=false`.\n" -}}
+{{- end -}}
+
+sourceDir: "{{ .chezmoi.sourceDir }}"
+data:
+  fullname: "Peter Golm"
+  email: "{{ $email }}"
+  wakatime_api_key: "{{ $wakatime_api_key }}"
