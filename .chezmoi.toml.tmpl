@@ -1,5 +1,5 @@
 {{- $is_codespaces:= env "CODESPACES" | not | not -}}
-{{- $is_devcontainer:= env "VSCODE_GIT_ASKPASS_EXTRA_ARGS" | not | not -}}
+{{- $is_devcontainer:= env "VSCODE_IPC_HOOK_CLI" | not | not -}}
 sourceDir = "{{ .chezmoi.sourceDir }}"
 
 [data]
