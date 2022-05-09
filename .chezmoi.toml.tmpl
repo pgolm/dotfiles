@@ -4,7 +4,7 @@ sourceDir = "{{ .chezmoi.sourceDir }}"
 
 [data]
   fullname = "Peter Golm"
-  codespaces = {{ $codespaces }}
+  codespaces = {{ $is_codespaces }}
 {{- if or $is_codespaces $is_devcontainer }}{{/* Codespaces dotfiles setup is non-interactive, so set an email address */}}
   email = "your@email.com"
 {{- else }}{{/* Interactive setup, so prompt for an email address */}}
