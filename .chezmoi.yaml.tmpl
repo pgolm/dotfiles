@@ -12,7 +12,7 @@
 {{- if hasKey . "wakatime_api_key" -}}
 {{-   $wakatime_api_key = .wakatime_api_key -}}
 {{- else if $interactive -}}
-{{-   $wakatime_api_key = (index (index (onepassword "7qxnszo3gnc4fbsceamk4jeiny").details.sections 1).fields 0).v -}}
+{{-   $wakatime_api_key = (index (onepassword "7qxnszo3gnc4fbsceamk4jeiny").fields 3).value -}}
 {{- end -}}
 
 {{- if $interactive -}}
