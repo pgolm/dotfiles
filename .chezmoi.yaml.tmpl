@@ -20,6 +20,9 @@
 {{- end -}}
 
 sourceDir: "{{ .chezmoi.sourceDir }}"
+edit:
+  command: "code"
+  args: ["--wait"]
 data:
   fullname: "Peter Golm"
   email: "{{ $email }}"

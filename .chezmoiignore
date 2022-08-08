@@ -1,3 +1,6 @@
 install.sh
 README.md
 .github/
+{{- if .chezmoi.username "vscode" }}
+.gitconfig
+{{- end }}
