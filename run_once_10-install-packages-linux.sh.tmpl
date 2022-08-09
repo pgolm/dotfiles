@@ -11,8 +11,8 @@ sudo apt-get install -y software-properties-common
 sudo apt-add-repository -y ppa:fish-shell/release-3
 {{ end }}
 
-sudo apt update
-sudo apt install -y \
+sudo apt-get update
+sudo apt-get install -y \
     git \
     fish \
     tmux \
@@ -25,6 +25,6 @@ curl -fsSL https://starship.rs/install.sh | bash -s -- -y
 
 if [ ! -e $HOME/.asdf ]
 then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 fi
 {{ end }}
