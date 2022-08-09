@@ -6,6 +6,8 @@ if test -d $HOME/.local/bin
     set -x PATH $HOME/.local/bin $PATH
 end
 
-if command -s starship > /dev/null
-    starship init fish | source
+if status --is-interactive
+    if command -s starship > /dev/null
+        starship init fish | source
+    end
 end
