@@ -9,6 +9,7 @@ packages:
       - "fish"
       - "starship"
       - "atuin"
+      - "zoxide"
     casks:
       - "claude"
       - "ghostty"
