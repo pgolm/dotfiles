@@ -4,6 +4,7 @@ packages:
       - "coreutils"
       - "git"
       - "mise"
+      - "neovim"
       - "ruby-build"
 
       - "fish"
@@ -14,6 +15,5 @@ packages:
       - "claude"
       - "ghostty"
       - "google-chrome"
-      - "visual-studio-code"
       - "visual-studio-code"
       - "zed"
