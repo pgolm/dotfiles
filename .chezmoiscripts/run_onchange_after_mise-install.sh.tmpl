@@ -1,5 +1,7 @@
 #!/bin/bash
 
+{{ if lookPath "mise" -}}
 # Mise configuration checksum: {{ include "dot_config/mise/config.toml" | sha256sum }}
 echo "🔧 Installing mise tools..."
 mise install
+{{ end -}}

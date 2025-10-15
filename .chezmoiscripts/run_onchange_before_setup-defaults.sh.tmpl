@@ -1,6 +1,6 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
+{{ if eq .chezmoi.os "darwin" -}}
 {{ if and (not .ephemeral) (not (stat (joinPath .chezmoi.homeDir "Development"))) -}}
 mkdir -p ~/Development
 xattr -wx "com.apple.FinderInfo" "0000000000000000040000000000000000000000000000000000000000000000" ~/Development
