@@ -1,5 +1,9 @@
 # shellcheck shell=fish
 
+# Initialize homebrew paths
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+
 set -g fish_greeting # Unset welcome message
 set -g EDITOR nvim
 
