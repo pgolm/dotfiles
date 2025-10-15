@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+{{ if and (not .ephemeral) (not (stat (joinPath .chezmoi.homeDir "Development"))) -}}
+mkdir -p ~/Development
+xattr -wx "com.apple.FinderInfo" "0000000000000000040000000000000000000000000000000000000000000000" ~/Development
+xattr -w "com.apple.icon.folder#S" '{"sym":"hammer.fill"}' ~/Development
+{{- end}}
+{{ end -}}

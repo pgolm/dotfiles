@@ -1,0 +1,17 @@
+packages:
+  darwin:
+    brews:
+      - "coreutils"
+      - "git"
+      - "mise"
+
+      - "fish"
+      - "starship"
+      - "atuin"
+    casks:
+      - "claude"
+      - "ghostty"
+      - "google-chrome"
+      - "visual-studio-code"
+      - "visual-studio-code"
+      - "zed"

@@ -1,6 +1,2 @@
-install.sh
 README.md
-.github/
-{{- if eq .chezmoi.username "vscode" }}
-.gitconfig
-{{- end }}
+install.sh
