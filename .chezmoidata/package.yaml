@@ -4,6 +4,7 @@ packages:
       - "coreutils"
       - "git"
       - "mise"
+      - "ruby-build"
 
       - "fish"
       - "starship"
