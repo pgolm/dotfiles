@@ -1,9 +1,0 @@
- # shellcheck shell=bash
-
-# Homebrew integration
-if command -v {{ output "brew" "--prefix" | trim }}/bin/brew &> /dev/null
-then
-fpath+=("{{ output "brew" "--prefix" | trim }}/share/zsh/site-functions")
-
-eval "$({{ output "brew" "--prefix" | trim }}/bin/brew shellenv)"
-fi

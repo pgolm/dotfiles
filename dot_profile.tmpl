@@ -1,7 +1,9 @@
  # shellcheck shell=bash
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Homebrew integration
 if command -v {{ output "brew" "--prefix" | trim }}/bin/brew &> /dev/null
 then
 eval "$({{ output "brew" "--prefix" | trim }}/bin/brew shellenv)"
 fi
+{{ end -}}
