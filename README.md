@@ -1,13 +1,21 @@
-# ~/.\*
+# ~/.*
 
-My dotfiles.
+Everything to set up my home environment.
 
-## Getting started
+## Setup
 
+1. Install prerequisites
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-git clone git@github.com:pgolm/dotfiles.git ~/.local/share/chezmoi/
-cd ~/.local/share/chezmoi/
-./install.sh
+
+2. Install dotfiles
+```sh
+brew install chezmoi
+chezmoi init --apply pgolm
 ```
 
-Powered by [chezmoi](https://www.chezmoi.io/)
+3. Change default shell to fish
+```sh
+chsh -s /opt/homebrew/opt/fish/bin/fish
+```

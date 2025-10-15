@@ -1,0 +1,7 @@
+ # shellcheck shell=bash
+
+# Homebrew integration
+if command -v {{ output "brew" "--prefix" | trim }}/bin/brew &> /dev/null
+then
+eval "$({{ output "brew" "--prefix" | trim }}/bin/brew shellenv)"
+fi

@@ -1,0 +1,5 @@
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+window-height = 48
+window-inherit-working-directory = false
+window-width = 209
+working-directory = home

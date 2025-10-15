@@ -1,0 +1,15 @@
+[tools]
+"gem:bundler" = "latest"
+"gem:neovim" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@modelcontextprotocol/inspector" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:neovim" = "latest"
+go = "1.25"
+node = "22"
+ruby = "3.4"
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["node", "ruby", "go", "python"]

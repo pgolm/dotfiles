@@ -1,0 +1,42 @@
+# shellcheck shell=bash
+
+export EDITOR=vim
+
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+
+# Initialize Starship prompt if available
+if command -v starship &> /dev/null
+then
+    eval "$(starship init zsh)"
+fi
+
+# Initialize Mise if available
+if command -v mise &> /dev/null
+then
+    eval "$(mise activate zsh)"
+fi
+
+# Initialize Atuin if available
+if command -v atuin &> /dev/null
+then
+    eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
+# Initialize zsh-autosuggestions if available
+if test -f "{{ joinPath (output "brew" "--prefix" | trim) "/share/zsh-autosuggestions/zsh-autosuggestions.zsh" }}"
+then
+    source {{ output "brew" "--prefix" | trim }}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# Initialize completion system
+autoload -U compinit
+compinit
+
+# Initialize zoxide if available
+if command -v zoxide &> /dev/null
+then
+    eval "$(zoxide init zsh)"
+fi

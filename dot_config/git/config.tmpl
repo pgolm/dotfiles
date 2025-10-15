@@ -1,0 +1,49 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  l = !git --no-pager log -n 10
+  stat = !git diff --stat
+  fpull = !git fetch origin && git reset --hard FETCH_HEAD
+  fpush = !git push --force-with-lease
+[apply]
+  whitespace = nowarn
+[branch]
+  sort = -committerdate
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  editor = vim
+  autocrlf = input
+[commit]
+  verbose = true
+[diff]
+  colorMoved = plain
+  algorithm = histogram
+  renames = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[help]
+  autocorrect = prompt
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+[rerere]
+  enabled = true
+  autoupdate = true
+[tag]
+  sort = version:refname
+[user]
+  name = {{ .name | quote }}
+  email = {{ .email | quote }}
+[includeIf "gitdir:~/Development/Work/"]
+  path = ~/.config/git/credentials_work
