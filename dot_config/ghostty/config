@@ -3,3 +3,6 @@ window-height = 48
 window-inherit-working-directory = false
 window-width = 209
 working-directory = home
+
+adjust-cursor-thickness = 150%
+shell-integration-features = no-cursor
