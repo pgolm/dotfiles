@@ -11,8 +11,12 @@ packages:
       - "starship"
       - "atuin"
       - "zoxide"
+
+      - "shellcheck"
+      - "shfmt"
     casks:
       - "claude"
+      - "docker-desktop"
       - "ghostty"
       - "google-chrome"
       - "visual-studio-code"
