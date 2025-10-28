@@ -4,3 +4,5 @@
 .vscode
 
 **/.claude/settings.local.json
+
+mise.toml
