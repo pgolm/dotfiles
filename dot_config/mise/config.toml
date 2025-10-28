@@ -1,18 +1,18 @@
 [tools]
-"gem:neovim" = "latest"
-"npm:neovim" = "latest"
 "gem:bundler" = "latest"
+"gem:neovim" = "latest"
 "gem:rubocop" = "latest"
 "gem:ruby-lsp" = "latest"
-"npm:@openai/codex" = "latest"
-"npm:sql-formatter" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:@mermaid-js/mermaid-cli" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:neovim" = "latest"
+"npm:sql-formatter" = "latest"
 go = "1.25"
 node = "22"
 ruby = "3.4"
-"npm:@mermaid-js/mermaid-cli" = "latest"
 
 [settings]
 experimental = true
