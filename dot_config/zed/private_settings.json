@@ -28,6 +28,7 @@
     "light": "One Light",
     "dark": "One Dark"
   },
+  "file_scan_inclusions": [".env*", ".mise.toml"],
   "languages": {
     "Ruby": {
       "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
