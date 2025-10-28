@@ -1,6 +1,7 @@
 packages:
   darwin:
     brews:
+      # Basics
       - "coreutils"
       - "git"
       - "mise"
@@ -15,6 +16,8 @@ packages:
       - "shellcheck"
       - "shfmt"
       - "gh"
+
+      - "graphviz"
     casks:
       - "claude"
       - "docker-desktop"
