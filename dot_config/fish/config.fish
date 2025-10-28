@@ -1,5 +1,5 @@
 set -g fish_greeting # Unset welcome message
-set -g EDITOR nvim
+set -gx EDITOR nvim
 
 alias vim='nvim'
 alias vi='nvim'
