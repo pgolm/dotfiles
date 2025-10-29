@@ -31,3 +31,8 @@ end
 if command -s docker >/dev/null
     docker completion fish | source
 end
+
+# Initialize rg completions if available
+if command -s rg >/dev/null
+    rg --generate complete-fish | source
+end
