@@ -4,7 +4,6 @@
 "gem:rubocop" = "latest"
 "gem:ruby-lsp" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
 "npm:@mermaid-js/mermaid-cli" = "latest"
 "npm:@modelcontextprotocol/inspector" = "latest"
 "npm:@openai/codex" = "latest"

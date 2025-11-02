@@ -6,3 +6,4 @@ working-directory = home
 
 adjust-cursor-thickness = 150%
 shell-integration-features = no-cursor
+keybind = shift+enter=text:\x1b\r

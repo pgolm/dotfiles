@@ -21,6 +21,7 @@ packages:
       - "graphviz"
     casks:
       - "claude"
+      - "claude-code"
       - "docker-desktop"
       - "ghostty"
       - "google-chrome"
