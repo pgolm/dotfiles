@@ -20,7 +20,7 @@
     "model_parameters": []
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "telemetry": {
     "diagnostics": false,
