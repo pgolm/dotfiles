@@ -22,7 +22,7 @@ if command -s atuin >/dev/null
     atuin init fish --disable-up-arrow | source
 end
 
-# Initialize Atuin if available
+# Initialize Zoxide if available
 if command -s zoxide >/dev/null
     zoxide init fish | source
 end
