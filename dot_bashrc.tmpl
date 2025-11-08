@@ -6,37 +6,35 @@ alias vi='nvim'
 
 {{ if eq .chezmoi.os "darwin" -}}
 # Add Homebrew paths if on macOS
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-fi
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 {{ end -}}
 
 # Initialize Starship prompt if available
-if command -v starship &>/dev/null; then
+if command --search starship &>/dev/null; then
   eval "$(starship init bash)"
 fi
 
 # Initialize Mise if available
-if command -v mise &>/dev/null; then
+if command --search mise &>/dev/null; then
   eval "$(mise activate bash)"
 fi
 
 # Initialize Atuin if available
-if command -v atuin &>/dev/null; then
+if command --search atuin &>/dev/null; then
   eval "$(atuin init bash --disable-up-arrow)"
 fi
 
 # Initialize zoxide if available
-if command -v zoxide &>/dev/null; then
+if command --search zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
 fi
 
 # Initialize Docker completions if available
-if command -v docker &>/dev/null; then
+if command --search docker &>/dev/null; then
   eval "$(docker completion bash)"
 fi
 
 # Initialize rg completions if available
-if command -v rg &>/dev/null; then
+if command --search rg &>/dev/null; then
   eval "$(rg --generate complete-bash)"
 fi
