@@ -12,6 +12,7 @@
 go = "1.25"
 node = "22"
 ruby = "3.4"
+"npm:@github/copilot" = "latest"
 
 [settings]
 experimental = true
