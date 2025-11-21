@@ -19,6 +19,15 @@
     },
     "model_parameters": []
   },
+  "context_servers": {
+    "serena-context-server": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "python_executable": null
+      }
+    }
+  },
   "features": {
     "edit_prediction_provider": "copilot"
   },

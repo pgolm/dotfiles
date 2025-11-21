@@ -13,6 +13,9 @@ go = "1.25"
 node = "22"
 ruby = "3.4"
 "npm:@github/copilot" = "latest"
+python = "3.12"
+uv = "latest"
+"pipx:serena-agent" = "latest"
 
 [settings]
 experimental = true
