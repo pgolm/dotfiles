@@ -38,3 +38,8 @@ end
 if command --search rg >/dev/null
     rg --generate complete-fish | source
 end
+
+# Initialize Scaleway CLI completions if available
+if command --search scw >/dev/null
+    eval (scw autocomplete script shell=fish)
+end
