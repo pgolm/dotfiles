@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": [
+        "github:pgolm/mcp-obsidian",
+        "/Users/pgolm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain/"
+      ]
+    }
+  },
+  "preferences": {
+    "quickEntryDictationShortcut": "off"
+  }
+}
