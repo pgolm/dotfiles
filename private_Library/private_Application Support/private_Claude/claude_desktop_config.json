@@ -1,11 +1,11 @@
 {
   "mcpServers": {
-    "obsidian": {
-      "command": "npx",
-      "args": [
-        "github:pgolm/mcp-obsidian",
-        "/Users/pgolm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain/"
-      ]
+    "mcp-obsidian": {
+      "command": "uvx",
+      "args": ["mcp-obsidian"],
+      "env": {
+        "OBSIDIAN_API_KEY": "f4906a4a5d8b441b78b7facc928280e56c71c74aae056de9aae1d50eefe2c4b2"
+      }
     }
   },
   "preferences": {
