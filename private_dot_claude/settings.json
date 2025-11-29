@@ -4,6 +4,9 @@
   "feedbackSurveyState": {
     "lastShownTime": 1753996797107
   },
+  "permissions": {
+    "allow": ["Bash(git status:*)", "Bash(git log:*)"]
+  },
   "mcpServers": {
     "mcp-obsidian": {
       "command": "uvx",
