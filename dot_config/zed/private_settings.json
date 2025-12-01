@@ -21,7 +21,6 @@
   },
   "context_servers": {
     "serena-context-server": {
-      "source": "extension",
       "enabled": true,
       "settings": {
         "python_executable": null
