@@ -17,6 +17,7 @@ python = "3.12"
 uv = "latest"
 "pipx:serena-agent" = "latest"
 "npm:@devcontainers/cli" = "latest"
+bun = "latest"
 
 [settings]
 experimental = true
