@@ -8,7 +8,7 @@
 ## Useful Darwin/Unix Commands
 
 ```bash
-fd "*.rb"                              # Find files (preferred over find)
+fd -e rb                               # Find Ruby files (preferred over find)
 rg "pattern" .                         # Search in files (preferred over grep)
 rg -l "pattern"                        # List files with matches only
 fd -e vue -e ts                        # Find by multiple extensions
