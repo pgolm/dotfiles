@@ -4,6 +4,7 @@
 .vscode
 .zed
 .serena
+.worktrees
 
 **/.claude/settings.local.json
 
