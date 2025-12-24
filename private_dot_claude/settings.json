@@ -6,8 +6,17 @@
   "permissions": {
     "allow": [
       "Bash(git status:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "mcp__sentry__*",
+      "mcp__context7__*"
     ]
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true,
+    "chrome-devtools-mcp@chrome-devtools-plugins": true
   },
   "alwaysThinkingEnabled": true,
   "autoUpdates": false,
@@ -17,9 +26,7 @@
   "mcpServers": {
     "mcp-obsidian": {
       "command": "uvx",
-      "args": [
-        "mcp-obsidian"
-      ],
+      "args": ["mcp-obsidian"],
       "env": {
         "OBSIDIAN_API_KEY": "f4906a4a5d8b441b78b7facc928280e56c71c74aae056de9aae1d50eefe2c4b2"
       }
