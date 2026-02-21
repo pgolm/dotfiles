@@ -20,6 +20,8 @@ packages:
 
       - "graphviz"
       - "uv"
+
+      - "zellij"
     casks:
       - "claude"
       - "claude-code"
