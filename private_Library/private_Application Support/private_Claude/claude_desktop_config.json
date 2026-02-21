@@ -1,7 +1,8 @@
 {
-  "mcpServers": {
-  },
+  "mcpServers": {},
   "preferences": {
-    "quickEntryDictationShortcut": "off"
+    "quickEntryDictationShortcut": "off",
+    "sidebarMode": "chat",
+    "coworkScheduledTasksEnabled": false
   }
 }
