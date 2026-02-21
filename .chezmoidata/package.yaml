@@ -5,8 +5,10 @@ packages:
       - "coreutils"
       - "git"
       - "mise"
-      - "neovim"
       - "ruby-build"
+
+      - "neovim"
+      - "tree-sitter-cli"
 
       - "fish"
       - "starship"
