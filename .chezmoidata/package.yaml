@@ -15,6 +15,9 @@ packages:
       - "atuin"
       - "zoxide"
       - "ripgrep"
+      - "fd"
+      - "eza"
+      - "try-rs"
 
       - "shellcheck"
       - "shfmt"

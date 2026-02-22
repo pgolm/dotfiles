@@ -9,6 +9,12 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 {{ end -}}
 
+
+# Initialize esa alias if available
+if command --search eza >/dev/null
+    alias ls='eza'
+end
+
 # Initialize Starship prompt if available
 if command --search starship >/dev/null
     starship init fish | source
@@ -37,6 +43,13 @@ end
 # Initialize rg completions if available
 if command --search rg >/dev/null
     rg --generate complete-fish | source
+end
+
+# Initialize rg completions if available
+if command --search try-rs >/dev/null
+    alias try='try-rs'
+    try-rs --setup-stdout fish | source
+    try-rs --completions fish | source
 end
 
 # Initialize Scaleway CLI completions if available
