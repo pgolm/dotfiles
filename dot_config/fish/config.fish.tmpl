@@ -1,3 +1,4 @@
+# vim: set filetype=fish :
 set -g fish_greeting # Unset welcome message
 set -gx EDITOR nvim
 
@@ -9,8 +10,7 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 {{ end -}}
 
-
-# Initialize esa alias if available
+# Initialize eza alias if available
 if command --search eza >/dev/null
     alias ls='eza'
 end
@@ -30,6 +30,11 @@ if command --search atuin >/dev/null
     atuin init fish --disable-up-arrow | source
 end
 
+# Initialize fzf if available
+# if command --search fzf >/dev/null
+#    fzf --fish | source
+# end
+
 # Initialize Zoxide if available
 if command --search zoxide >/dev/null
     zoxide init fish | source
@@ -45,7 +50,7 @@ if command --search rg >/dev/null
     rg --generate complete-fish | source
 end
 
-# Initialize rg completions if available
+# Initialize try-rs if available
 if command --search try-rs >/dev/null
     set -gx TRY_CONFIG_DIR ~/.config/try-rs
     alias try='try-rs'
@@ -53,12 +58,12 @@ if command --search try-rs >/dev/null
     try-rs --completions fish | source
 end
 
-# initialize scaleway cli completions if available
+# Initialize scaleway cli completions if available
 if command --search scw >/dev/null
     eval (scw autocomplete script shell=fish)
 end
 
-# initialize scaleway cli completions if available
+# Initialize bat if available
 if command --search bat >/dev/null
   set -gx BAT_THEME 'Catppuccin Latte' 
 end

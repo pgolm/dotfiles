@@ -1,33 +1,29 @@
 mouse-scroll-multiplier = 0.5
 
-window-decoration = true
-window-padding-x = 8
-window-padding-y = 8
-
-theme = catppuccin-mocha
-font-feature = -liga
-
-macos-titlebar-style = transparent
-
-# Unbind CMD+... keys so they will be forwarded to Zellij
-keybind = cmd+t=unbind
-# keybind = cmd+n=unbind
-keybind = cmd+c=unbind
-keybind = cmd+w=unbind
-keybind = cmd+opt+left=unbind
-keybind = cmd+opt+right=unbind
-
 theme = dark:Catppuccin Frappe,light:Catppuccin Latte
 window-height = 48
 # window-inherit-working-directory = false
 window-width = 209
 # working-directory = home
+window-decoration = true
+window-padding-x = 8
+window-padding-y = 8
+
+macos-titlebar-style = transparent
+
+# Unbind CMD+... keys so they will be forwarded to Zellij
+# keybind = cmd+n=unbind
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = cmd+c=unbind
+keybind = cmd+opt+left=unbind
+keybind = cmd+opt+right=unbind
+keybind = cmd+t=unbind
+keybind = cmd+w=unbind
+
+macos-option-as-alt = left
 
 # adjust-cursor-thickness = 150%
 shell-integration-features = no-cursor
 # keybind = shift+enter=text:\x1b\r
 
-macos-option-as-alt = left
-
-keybind = alt+left=unbind
-keybind = alt+right=unbind
