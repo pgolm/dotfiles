@@ -53,9 +53,14 @@ if command --search try-rs >/dev/null
     try-rs --completions fish | source
 end
 
-# Initialize Scaleway CLI completions if available
+# initialize scaleway cli completions if available
 if command --search scw >/dev/null
     eval (scw autocomplete script shell=fish)
+end
+
+# initialize scaleway cli completions if available
+if command --search bat >/dev/null
+  set -gx BAT_THEME 'Catppuccin Latte' 
 end
 
 # Check if we're in an interactive shell

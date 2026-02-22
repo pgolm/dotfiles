@@ -16,6 +16,7 @@ packages:
       - "zoxide"
       - "ripgrep"
       - "fd"
+      - "bat"
       - "eza"
       - "try-rs"
 
