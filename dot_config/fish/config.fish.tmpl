@@ -1,19 +1,9 @@
 # vim: set filetype=fish :
-set -g fish_greeting # Unset welcome message
+set -g fish_greeting
 set -gx EDITOR nvim
 
 alias vim='nvim'
 alias vi='nvim'
-
-{{ if eq .chezmoi.os "darwin" -}}
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-{{ end -}}
-
-# Initialize eza alias if available
-if command --search eza >/dev/null
-    alias ls='eza'
-end
 
 # Initialize Starship prompt if available
 if command --search starship >/dev/null
@@ -39,44 +29,3 @@ end
 if command --search zoxide >/dev/null
     zoxide init fish | source
 end
-
-# Initialize Docker completions if available
-if command --search docker >/dev/null
-    docker completion fish | source
-end
-
-# Initialize rg completions if available
-if command --search rg >/dev/null
-    rg --generate complete-fish | source
-end
-
-# Initialize try-rs if available
-if command --search try-rs >/dev/null
-    set -gx TRY_CONFIG_DIR ~/.config/try-rs
-    alias try='try-rs'
-    try-rs --setup-stdout fish | source
-    try-rs --completions fish | source
-end
-
-# Initialize scaleway cli completions if available
-if command --search scw >/dev/null
-    eval (scw autocomplete script shell=fish)
-end
-
-# Initialize bat if available
-if command --search bat >/dev/null
-  set -gx BAT_THEME 'Catppuccin Latte' 
-end
-
-# Check if we're in an interactive shell
-if status is-interactive
-    # At this point, specify the Zellij config dir, so we can launch it manually if we want to
-    export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
-
-    # Check if our Terminal emulator is Ghostty
-    if [ "$TERM" = "xterm-ghostty" ]
-        # Launch zellij
-        eval (zellij setup --generate-auto-start fish | string collect)
-    end
-end
-

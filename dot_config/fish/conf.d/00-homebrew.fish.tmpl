@@ -1,0 +1,8 @@
+# vim: set filetype=fish :
+{{ if eq .chezmoi.os "darwin" -}}
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+{{ end -}}
+
+# Hide additional environment hints from Homebrew
+set -gx HOMEBREW_NO_ENV_HINTS 1
