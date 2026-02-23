@@ -6,12 +6,42 @@
   "permissions": {
     "allow": [
       "Bash(fd:*)",
+      "Bash(rg:*)",
+
       "Bash(gh issue list:*)",
       "Bash(gh issue view:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr diff:*)",
+
       "Bash(git log:*)",
       "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
       "Bash(git worktree list)",
-      "Bash(rg:*)",
+
+      "Bash(bundle exec rspec:*)",
+      "Bash(bundle exec rubocop:*)",
+      "Bash(bundle exec standardrb:*)",
+      "Bash(bundle exec rails test:*)",
+      "Bash(bundle exec rails routes:*)",
+      "Bash(bundle exec rails db:migrate:status:*)",
+      "Bash(bundle exec rake -T:*)",
+      "Bash(bundle info:*)",
+      "Bash(bundle list:*)",
+      "Bash(bundle show:*)",
+      "Bash(bundle outdated:*)",
+
+      "Bash(bin/rails routes:*)",
+      "Bash(bin/rails test:*)",
+      "Bash(bin/rails db:migrate:status:*)",
+      "Bash(bin/rspec:*)",
+      "Bash(bin/rake -T:*)",
+
+      "Bash(ruby -c:*)",
+
       "mcp__context7",
       "mcp__sentry"
     ]
