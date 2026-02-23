@@ -24,14 +24,9 @@ The implementation uses refresh tokens to improve security
 while maintaining a good user experience with longer sessions.
 ```
 
-## Useful Darwin/Unix Commands
+## Shell Command Preferences
 
-```bash
-fd -e rb                               # Find Ruby files (preferred over find)
-rg "pattern" .                         # Search in files (preferred over grep)
-rg -l "pattern"                        # List files with matches only
-fd -e vue -e ts                        # Find by multiple extensions
-```
+When using Bash, always use `fd` instead of `find` and `rg` instead of `grep`. These are faster and installed on all my machines.
 
 ## Code Style Preferences
 
