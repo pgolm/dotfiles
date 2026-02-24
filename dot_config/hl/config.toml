@@ -1,0 +1,125 @@
+hide = []
+
+# Configuration of the predefined set of fields.
+[fields.predefined]
+#
+# Configuration of the predefined "time" field.
+[fields.predefined.time]
+# Determines when to show the time field automatically based on the presence of time variants.
+# Options: ["always", "auto"].
+show = "always"
+names = [
+  "ts",
+  "TS",
+  "time",
+  "TIME",
+  "Time",
+  "timestamp",
+  "Timestamp",
+  "TIMESTAMP",
+  "_SOURCE_REALTIME_TIMESTAMP",
+  "__REALTIME_TIMESTAMP",
+  "@timestamp"
+]
+
+# Configuration of the predefined "logger" field.
+[fields.predefined.logger]
+names = ["logger", "LOGGER", "Logger", "span.name"]
+
+# Configuration of the predefined "level" field.
+[fields.predefined.level]
+# Determines when to show the level field automatically based on the presence of level variants.
+# Options: ["always", "auto"].
+show = "always"
+
+# Common levels.
+[[fields.predefined.level.variants]]
+names = ["level", "LEVEL", "Level", "severity"]
+
+[fields.predefined.level.variants.values]
+error = ["error", "err", "fatal", "critical", "panic"]
+warning = ["warning", "warn"]
+info = ["info", "information"]
+debug = ["debug"]
+trace = ["trace"]
+
+# Systemd levels.
+[[fields.predefined.level.variants]]
+names = ["PRIORITY"]
+
+[fields.predefined.level.variants.values]
+error = [3, 2, 1]
+warning = [5, 4]
+info = [6]
+debug = [7]
+
+# Configuration of the predefined "message" field.
+[fields.predefined.message]
+names = ["msg", "message", "MESSAGE", "Message"]
+
+# Configuration of the predefined "caller" field.
+[fields.predefined.caller]
+names = ["caller", "CALLER", "Caller"]
+
+# Configuration of the predefined "caller-file" field (combines to "caller").
+[fields.predefined.caller-file]
+names = []
+
+# Configuration of the predefined "caller-line" field (combines to "caller").
+[fields.predefined.caller-line]
+names = []
+
+#
+# Formatting settings.
+#
+
+[formatting]
+#
+# Flatten nested fields by joining them with a dot. Options: ["always", "never"].
+flatten = "always"
+#
+# Prettify field keys by replacing underscores with hyphens. Options: [true, false].
+prettify-field-keys = true
+
+# Message format [auto-quoted, always-quoted, always-double-quoted, delimited, raw]:
+# * "auto-quoted"          • Automatically enables or disables message quotation to improve clarity or avoid ambiguities.
+# * "always-quoted"        • Always prints messages in most appropriate to align them consistently and yet maintain readability.
+# * "always-double-quoted" • Always prints messages in double quotes to align them consistently.
+# * "delimited"            • Separates the message from fields with a supposedly rare delimiter to avoid quotation in most cases and avoid ambiguities at the same time.
+#                            See [formatting.punctuation.message-delimiter] setting.
+# * "raw"                  • Always prints messages without any quotes, escaping or delimiters.
+[formatting.message]
+format = "delimited"
+
+# Punctuation settings.
+# Each item here is either a string or an object with keys "ascii" and "unicode".
+# If set to a string, it is used for both ASCII mode and Unicode mode regardless of the [ascii] setting.
+# See [ascii] setting.
+[formatting.punctuation]
+logger-name-separator = ":"
+field-key-value-separator = "="
+string-opening-quote = "'"
+string-closing-quote = "'"
+caller-name-file-separator = " @ "
+hidden-fields-indicator = "..."
+level-left-separator = "["
+level-right-separator = "]"
+input-number-prefix = "#"
+input-number-left-separator = ""
+input-name-left-separator = ""
+array-separator = " "
+source-location-separator = { ascii = "-> ", unicode = "→ " }
+input-number-right-separator = { ascii = " | ", unicode = " │ " }
+input-name-right-separator = { ascii = " | ", unicode = " │ " }
+input-name-clipping = { ascii = "..", unicode = "··" }
+input-name-common-part = { ascii = "..", unicode = "··" }
+message-delimiter = { ascii = "::", unicode = "›" }
+
+# Expansion settings.
+[formatting.expansion]
+# Field expansion mode [never|inline|auto|always].
+# * "never"  • Single-line output, escape newlines/tabs as \n/\t
+# * "inline" • Preserve newlines/tabs as-is (legacy behavior)
+# * "auto"   • Expand fields with newlines/tabs into indented multi-line blocks
+# * "always" • Show each field on its own line, expand multi-line content with indentation
+mode = "auto"

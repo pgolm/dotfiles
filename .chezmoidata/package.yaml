@@ -16,6 +16,7 @@ packages:
       - "fzf"
       - "gh"
       - "graphviz"
+      - "hl"
       - "neovim"
       - "ripgrep"
       - "shellcheck"
