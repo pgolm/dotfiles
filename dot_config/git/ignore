@@ -7,5 +7,6 @@
 .worktrees
 
 **/.claude/settings.local.json
+**/.playwright-cli
 
 mise.toml

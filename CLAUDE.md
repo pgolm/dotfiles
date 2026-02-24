@@ -21,11 +21,12 @@ chezmoi execute-template < file.tmpl  # Test template rendering
 
 ### Template Data Flow
 - `.chezmoi.yaml.tmpl` defines template variables (`email`, `work`, `ephemeral`, `headless`, `hostname`)
+  - Also defines `name`, `email_work` (prompted on work machines)
 - `.chezmoidata/package.yaml` contains package lists for Homebrew
 - Templates (`.tmpl` files) use Go template syntax with these variables
 
 ### Key Conditionals
-- `$work` - true for work machines (hostname `MBP-295` or `pg-work`)
+- `$work` - true for work machines (hostname `pg-work`)
 - `$ephemeral` - true for containers/codespaces
 - `$headless` - true when no display (disables interactive prompts)
 
@@ -48,4 +49,8 @@ Current scripts:
 ### Managed Configurations
 - **Shell**: Fish shell with starship prompt, atuin history, zoxide navigation
 - **Development**: mise for runtime versions (Ruby, Node, Go, Python), git config
-- **Applications**: Ghostty terminal, Zed editor, Claude Code
+- **Terminal**: Ghostty terminal, Zellij multiplexer
+- **Editors**: Zed, Neovim (NvChad-based config)
+- **CLI tools**: bat, eza, ripgrep, fd, try-rs
+- **AI**: Claude Code (settings, permissions, skills managed via chezmoi)
+- **SSH**: Templated config (`dot_ssh/config.tmpl`) with conditional work entries
