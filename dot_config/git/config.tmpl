@@ -16,12 +16,16 @@
 [core]
   editor = nvim
   autocrlf = input
+  pager = delta
 [commit]
   verbose = true
 [diff]
   colorMoved = plain
   algorithm = histogram
   renames = true
+[delta]
+  navigate = true  
+  line-numbers = true
 [fetch]
   prune = true
   pruneTags = true
@@ -30,6 +34,8 @@
   autocorrect = prompt
 [init]
   defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
 [pull]
   rebase = true
 [push]

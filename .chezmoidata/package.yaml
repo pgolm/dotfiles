@@ -10,6 +10,7 @@ packages:
 
       - "atuin"
       - "bat"
+      - "delta"
       - "eza"
       - "fd"
       - "fish"
