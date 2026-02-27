@@ -15,6 +15,15 @@
       "Bash(gh pr checks:*)",
       "Bash(gh pr diff:*)",
 
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh release list:*)",
+      "Bash(gh release view:*)",
+      "Bash(gh label list:*)",
+      "Bash(gh workflow list:*)",
+      "Bash(gh workflow view:*)",
+
       "Bash(git log:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
