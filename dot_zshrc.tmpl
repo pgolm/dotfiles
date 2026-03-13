@@ -1,0 +1,35 @@
+# vim: set filetype=zsh :
+
+alias vim='nvim'
+alias vi='nvim'
+
+# Mise
+if command -v mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+# Starship prompt
+if command -v starship &>/dev/null; then
+  eval "$(starship init zsh)"
+fi
+
+# Atuin
+if command -v atuin &>/dev/null; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
+# Zoxide
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+# eza
+if command -v eza &>/dev/null; then
+  alias ls='eza'
+fi
+
+# bat
+export BAT_THEME='GitHub'
+
+# Claude Code
+export DISABLE_AUTOUPDATER=1
