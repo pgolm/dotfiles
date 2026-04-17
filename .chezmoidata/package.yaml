@@ -29,7 +29,7 @@ packages:
       - "zoxide"
     casks:
       - "claude"
-      - "claude-code"
+      - "claude-code@latest"
       - "docker-desktop"
       - "ghostty"
       - "google-chrome"
