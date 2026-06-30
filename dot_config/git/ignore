@@ -5,6 +5,7 @@
 .zed
 .serena
 .worktrees
+.claude/.worktrees
 
 **/.claude/settings.local.json
 **/.playwright-cli
