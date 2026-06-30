@@ -15,9 +15,10 @@ ruby = "3.4"
 "npm:@github/copilot" = "latest"
 python = "3.12"
 uv = "latest"
-"pipx:serena-agent" = "latest"
 "npm:@devcontainers/cli" = "latest"
 bun = "latest"
+"pipx:dagster-dg-cli" = "latest"
+"pipx:poetry" = "latest"
 
 [settings]
 experimental = true

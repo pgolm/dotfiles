@@ -7,69 +7,156 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    "opencode": {
+      "show_go_models": false,
+    },
+  },
+  "status_bar": {
+    "show_active_file": false,
+  },
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "provider": "zed",
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "diff_view_style": "unified",
   "agent_servers": {
-    "claude": {
-      "default_mode": "plan"
-    }
+    "opencode": {
+      "default_config_options": {
+        "model": "opencode/glm-5.2",
+      },
+      "type": "registry",
+    },
+    "claude-acp": {
+      "favorite_config_option_values": {
+        "effort": ["high"],
+      },
+      "type": "registry",
+      "default_mode": "plan",
+    },
   },
   "agent": {
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.5"
+    "auto_compact": {
+      "threshold": "90%",
     },
-    "model_parameters": []
+    "play_sound_when_agent_done": "when_hidden",
+    "enable_feedback": false,
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "dock": "left",
+    "default_profile": "write",
+    "default_model": {
+      "effort": "xhigh",
+      "enable_thinking": true,
+      "provider": "opencode",
+      "model": "zen/deepseek-v4-flash",
+    },
+    "terminal_init_command": "claude agents",
+    "model_parameters": [],
+  },
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait",
+      "VISUAL": "zed --wait",
+    },
   },
   "context_servers": {
+    "Grafana": {
+      "enabled": true,
+      "remote": false,
+      "command": "uvx",
+      "args": [
+        "mcp-grafana",
+        "--disable-prometheus",
+        "--disable-loki",
+        "--disable-sift",
+      ],
+    },
+    "chrome-devtools-mcp-zed": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "headless": true,
+        "isolated": true,
+      },
+    },
+    "AppSignal": {
+      "enabled": true,
+      "url": "https://appsignal.com/api/mcp",
+    },
+    "Metabase": {
+      "enabled": true,
+      "url": "https://metabase.fobizz.com/api/mcp",
+    },
     "serena-context-server": {
       "enabled": true,
       "settings": {
-        "python_executable": null
-      }
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "copilot"
+        "python_executable": null,
+      },
+    },
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "file_scan_inclusions": [".env*", ".mise.toml"],
+  "lsp": {
+    "ruby-lsp": {
+      "initialization_options": {
+        "formatter": "standard",
+        "linters": ["standard"],
+      },
+      "settings": {
+        "use_bundler": false,
+      },
+    },
+  },
   "languages": {
     "Ruby": {
-      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"],
     },
     "Fish": {
       "formatter": {
         "external": {
-          "command": "fish_indent"
-        }
-      }
+          "command": "fish_indent",
+        },
+      },
     },
     "Shell Script": {
       "format_on_save": "on",
       "formatter": {
         "external": {
           "command": "shfmt",
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
-        }
-      }
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+        },
+      },
     },
     "SQL": {
       "formatter": {
         "external": {
-          "command": "sql-formatter"
-        }
-      }
-    }
-  }
+          "command": "sql-formatter",
+        },
+      },
+    },
+  },
 }

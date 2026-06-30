@@ -9,5 +9,6 @@
 
 **/.claude/settings.local.json
 **/.playwright-cli
+**/.superset
 
 mise.toml
