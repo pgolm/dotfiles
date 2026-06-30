@@ -30,7 +30,7 @@ packages:
     casks:
       - "claude"
       - "claude-code@latest"
-      - "docker-desktop"
+      # - "docker-desktop"
       - "ghostty"
       - "google-chrome"
       - "zed"
