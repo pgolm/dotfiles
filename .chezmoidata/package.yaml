@@ -34,3 +34,19 @@ packages:
       - "ghostty"
       - "google-chrome"
       - "zed"
+
+    # Skills installed via npx skills (global, to ~/.agents/skills/)
+    # Each entry: source repo + specific skill names to install
+    # Use ["*"] to install all skills from a source
+    skills:
+      - source: "https://github.com/mattpocock/skills"
+        skills:
+          - "grill-me"
+      - source: "https://github.com/pgolm/claude-plugins"
+        skills:
+          - "azure-foundry"
+          - "litellm-gateway"
+          - "work-summarizer"
+      - source: "https://github.com/vercel-labs/agent-browser"
+        skills:
+          - "agent-browser"

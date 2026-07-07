@@ -1,0 +1,10 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.os "darwin" -}}
+echo "🔧 Installing agent skills..."
+
+# Install specific skills from each source
+{{ range .packages.darwin.skills -}}
+npx --yes skills add {{ .source | quote }}{{ range .skills }} --skill {{ . | quote }}{{ end }} --agent claude-code --global --yes
+{{ end -}}
+{{ end -}}
