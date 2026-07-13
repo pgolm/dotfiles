@@ -1,7 +1,7 @@
 ## Personal Knowledge Management System
 
-My Obsidian Vault is located at:
-`/Users/pgolm/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain`
+Find the Obsidian Vault path by running:
+`obsidian-cli vault info=path`
 
 When working in the Second Brain or answering questions about it, refer to the `CLAUDE.md` and rules in `.claude/rules/` for project-specific instructions, including the book database with semantic search over indexed EPUBs.
 

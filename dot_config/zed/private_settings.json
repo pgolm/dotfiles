@@ -6,6 +6,7 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
+// -*- jsonc -*-
 {
   "language_models": {
     "opencode": {
@@ -17,62 +18,62 @@
           "max_tokens": 8192,
           "max_output_tokens": 4096,
           "protocol": "opencode_chat",
-          "subscription": "zen"
-        }
-      ]
-    }
+          "subscription": "zen",
+        },
+      ],
+    },
   },
   "status_bar": {
-    "show_active_file": false
+    "show_active_file": false,
   },
   "edit_predictions": {
     "allow_data_collection": "no",
-    "provider": "zed"
+    "provider": "zed",
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "git_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "diff_view_style": "unified",
   "agent_servers": {
     "opencode": {
       "default_config_options": {
-        "model": "opencode/glm-5.2"
+        "model": "opencode/glm-5.2",
       },
-      "type": "registry"
+      "type": "registry",
     },
     "claude-acp": {
       "default_config_options": {
-        "mode": "auto"
+        "mode": "auto",
       },
       "favorite_config_option_values": {
-        "effort": ["high"]
+        "effort": ["high"],
       },
       "type": "registry",
-      "default_mode": "plan"
-    }
+      "default_mode": "plan",
+    },
   },
   "agent": {
     "inline_assistant_model": {
       "provider": "opencode",
-      "model": "free/big-pickle",
-      "enable_thinking": false
+      "model": "zen/glm-5.2",
+      "enable_thinking": false,
     },
     "auto_compact": {
-      "threshold": "90%"
+      "threshold": "90%",
     },
     "play_sound_when_agent_done": "when_hidden",
     "enable_feedback": false,
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "dock": "left",
     "default_profile": "write",
@@ -80,20 +81,20 @@
       "effort": "xhigh",
       "enable_thinking": true,
       "provider": "opencode",
-      "model": "zen/zen/glm-5.2"
+      "model": "zen/zen/glm-5.2",
     },
     "commit_message_model": {
       "provider": "opencode",
-      "model": "free/big-pickle"
+      "model": "free/big-pickle",
     },
     "terminal_init_command": "claude agents",
-    "model_parameters": []
+    "model_parameters": [],
   },
   "terminal": {
     "env": {
       "EDITOR": "zed --wait",
-      "VISUAL": "zed --wait"
-    }
+      "VISUAL": "zed --wait",
+    },
   },
   "context_servers": {
     "Grafana": {
@@ -104,81 +105,81 @@
         "mcp-grafana",
         "--disable-prometheus",
         "--disable-loki",
-        "--disable-sift"
-      ]
+        "--disable-sift",
+      ],
     },
     "chrome-devtools-mcp-zed": {
       "enabled": true,
       "remote": false,
       "settings": {
         "headless": true,
-        "isolated": true
-      }
+        "isolated": true,
+      },
     },
     "AppSignal": {
       "enabled": true,
-      "url": "https://appsignal.com/api/mcp"
+      "url": "https://appsignal.com/api/mcp",
     },
     "Metabase": {
       "enabled": true,
-      "url": "https://metabase.fobizz.com/api/mcp"
+      "url": "https://metabase.fobizz.com/api/mcp",
     },
     "serena-context-server": {
       "enabled": true,
       "settings": {
-        "python_executable": null
-      }
-    }
+        "python_executable": null,
+      },
+    },
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "file_scan_inclusions": [".env*", ".mise.toml"],
   "lsp": {
     "ruby-lsp": {
       "initialization_options": {
         "formatter": "standard",
-        "linters": ["standard"]
+        "linters": ["standard"],
       },
       "settings": {
-        "use_bundler": false
-      }
-    }
+        "use_bundler": false,
+      },
+    },
   },
   "languages": {
     "Ruby": {
-      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"],
     },
     "Fish": {
       "formatter": {
         "external": {
-          "command": "fish_indent"
-        }
-      }
+          "command": "fish_indent",
+        },
+      },
     },
     "Shell Script": {
       "format_on_save": "on",
       "formatter": {
         "external": {
           "command": "shfmt",
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"]
-        }
-      }
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+        },
+      },
     },
     "SQL": {
       "formatter": {
         "external": {
-          "command": "sql-formatter"
-        }
-      }
-    }
-  }
+          "command": "sql-formatter",
+        },
+      },
+    },
+  },
 }
