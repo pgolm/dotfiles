@@ -21,7 +21,7 @@ macos-titlebar-style = transparent
 # keybind = cmd+t=unbind
 # keybind = cmd+w=unbind
 
-macos-option-as-alt = left
+# macos-option-as-alt = left
 
 # adjust-cursor-thickness = 150%
 shell-integration-features = no-cursor
