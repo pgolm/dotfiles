@@ -16,6 +16,7 @@ packages:
       - "fzf"
       - "gh"
       - "graphviz"
+      - "herdr"
       - "hl"
       - "neovim"
       - "ripgrep"
@@ -38,14 +39,18 @@ packages:
     # Each entry: source repo + specific skill names to install
     # Use ["*"] to install all skills from a source
     skills:
-      - source: "https://github.com/mattpocock/skills"
+      - source: "herdrdev/herdr"
         skills:
-          - "grill-me"
-      - source: "https://github.com/pgolm/claude-plugins"
+          - "herdr"
+      - source: "mattpocock/skills"
         skills:
-          - "azure-foundry"
-          - "litellm-gateway"
-          - "work-summarizer"
-      - source: "https://github.com/vercel-labs/agent-browser"
+          - "grilling"
+      - source: "pgolm/skills"
+        skills:
+          - "clarify"
+          - "open-pull-request"
+          - "to-spec"
+          - "wrap-up-work"
+      - source: "vercel-labs/agent-browser"
         skills:
           - "agent-browser"

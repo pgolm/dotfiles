@@ -8,19 +8,22 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 // -*- jsonc -*-
 {
+  "ssh_connections": [
+    {
+      "host": "mac-mini.local",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "~/Development"
+          ]
+        }
+      ]
+    }
+  ],
   "language_models": {
     "opencode": {
       "show_go_models": false,
-      "available_models": [
-        {
-          "name": "zen/glm-5.2",
-          "display_name": "GLM 5.2",
-          "max_tokens": 8192,
-          "max_output_tokens": 4096,
-          "protocol": "opencode_chat",
-          "subscription": "zen",
-        },
-      ],
     },
   },
   "status_bar": {
@@ -64,7 +67,7 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "opencode",
-      "model": "zen/glm-5.2",
+      "model": "zen/glm-5.1",
       "enable_thinking": false,
     },
     "auto_compact": {
@@ -78,16 +81,16 @@
     "dock": "left",
     "default_profile": "write",
     "default_model": {
-      "effort": "xhigh",
+      "effort": "max",
       "enable_thinking": true,
       "provider": "opencode",
-      "model": "zen/zen/glm-5.2",
+      "model": "zen/glm-5.2",
     },
     "commit_message_model": {
       "provider": "opencode",
       "model": "free/big-pickle",
     },
-    "terminal_init_command": "claude agents",
+    "terminal_init_command": "claude",
     "model_parameters": [],
   },
   "terminal": {

@@ -75,11 +75,23 @@
   "worktree": {
     "baseRef": "head"
   },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/pgolm/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "fallbackModel": ["sonnet", "haiku"],
   "enabledPlugins": {
-    "commit-commands@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
     "ruby-lsp@claude-code-lsps": true
   },
   "language": "German",
@@ -101,5 +113,6 @@
   "autoUpdates": false,
   "feedbackSurveyState": {
     "lastShownTime": 1753996797107
-  }
+  },
+  "autoMemoryEnabled": false
 }
