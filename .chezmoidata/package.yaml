@@ -25,6 +25,8 @@ packages:
       - "starship"
       - "tree-sitter-cli"
       - "try-rs"
+      - "tuicr"
+      - "worktrunk"
       - "zellij"
       - "zoxide"
     casks:
