@@ -31,6 +31,9 @@ When using Bash, always use `fd` instead of `find` and `rg` instead of `grep`. T
 ## Code Style Preferences
 
 - Avoid over-engineering - solve the immediate problem first
+- Kommentare nur, wo das "warum" nicht aus dem Code hervorgeht.
+  Keine Kommentare, die beschreiben was die nächste Zeile tut.
+  Keine Section-Header-Kommentare, keine Docstrings für triviale Methoden.
 
 ## Communication Preferences
 
