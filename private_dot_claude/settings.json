@@ -8,8 +8,7 @@
       "Bash(fd:*)",
       "Bash(rg:*)",
       "WebFetch",
-      "Bash(cat:*)",
-      "Bash(find:*)",
+      "WebSearch",
 
       "Bash(gh issue list:*)",
       "Bash(gh issue view:*)",
@@ -54,8 +53,7 @@
 
       "Bash(ruby -c:*)",
 
-      "mcp__context7",
-      "mcp__sentry",
+      "mcp__plugin_context7_context7",
 
       "mcp__appsignal__get_applications",
       "mcp__appsignal__get_anomaly_incidents",
@@ -68,8 +66,7 @@
       "mcp__metabase__get_table",
 
       "mcp__grafana__list_datasources",
-      "mcp__grafana__grafana_api_request",
-      "mcp__grafana__query_prometheus"
+      "mcp__grafana__grafana_api_request"
     ]
   },
   "worktree": {
@@ -92,27 +89,24 @@
   "fallbackModel": ["sonnet", "haiku"],
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
-    "ruby-lsp@claude-code-lsps": true
+    "ruby-lsp@claude-code-lsps": true,
+    "worktrunk@worktrunk": true
+  },
+  "extraKnownMarketplaces": {
+    "worktrunk": {
+      "source": {
+        "source": "github",
+        "repo": "max-sixty/worktrunk"
+      }
+    }
   },
   "language": "German",
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "tui": "fullscreen",
-  "voice": {
-    "enabled": true,
-    "mode": "hold"
-  },
-  "skipDangerousModePermissionPrompt": true,
-  "skipWorkflowUsageWarning": true,
-  "theme": "light",
-  "preferredNotifChannel": "terminal_bell",
+  "autoMemoryEnabled": false,
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true,
-  "autoUpdates": false,
-  "feedbackSurveyState": {
-    "lastShownTime": 1753996797107
-  },
-  "autoMemoryEnabled": false
+  "preferredNotifChannel": "terminal_bell"
 }
