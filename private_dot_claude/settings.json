@@ -67,7 +67,8 @@
 
       "mcp__grafana__list_datasources",
       "mcp__grafana__grafana_api_request"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "worktree": {
     "baseRef": "head"
